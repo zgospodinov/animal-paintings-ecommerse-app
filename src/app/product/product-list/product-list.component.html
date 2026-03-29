@@ -2,7 +2,7 @@
   <h2>Our latest collection</h2>
   <div class="product-flexbox">
     <div *ngFor="let product of products">
-      <mat-card class="product-card">
+      <mat-card class="product-card" (click)="addToCart(product)">
         <img
           mat-card-image
           src="assets/images/{{ product.image_url }}"
