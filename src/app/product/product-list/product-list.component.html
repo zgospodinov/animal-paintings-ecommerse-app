@@ -7,6 +7,15 @@
       placeholder="Search products..."
     />
   </mat-form-field>
+  <mat-form-field class="sort-dropdown">
+    <mat-select
+      (selectionChange)="sortProducts($event.value)"
+      placeholder="Sort"
+    >
+      <mat-option value="priceLowHigh">Price: Low to High</mat-option>
+      <mat-option value="priceHighLow">Price: High to Low</mat-option>
+    </mat-select>
+  </mat-form-field>
   <div class="product-flexbox">
     <div *ngFor="let product of filteredProducts">
       <mat-card class="product-card" (click)="addToCart(product)">
